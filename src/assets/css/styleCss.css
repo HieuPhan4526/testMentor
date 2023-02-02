@@ -236,6 +236,14 @@ a:hover{
     font-size: 12px;
     width:30px;
 }
+.text-title{
+    font-size: 20px;
+    color: #B5B5B5;
+    padding: 10px
+}
+.creactProject-title .active{
+    color: #1C86EE;
+}
 @keyframes moveImg {
     0% {
         transform: rotate(4deg) translate(2px,2px)

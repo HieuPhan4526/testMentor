@@ -4,8 +4,11 @@ import { useDispatch } from "react-redux";
 import { GetAllProjectAction } from "../../redux/Actions/ProjectAction";
 import { history } from "../../App";
 import { projectServices } from "../../services/ProjectServices";
+import Loadding from "../../Component/Loadding/Loadding";
+import { HIDE_LOADING, SHOW_LOADING } from "../../redux/Types/LoaddingType";
 
 export default function GetAllProject() {
+  const dispatch = useDispatch();
   const columns = [
     {
       title: "id",
@@ -68,6 +71,15 @@ export default function GetAllProject() {
       .catch((error) => {
         console.log(error);
       });
+
+    dispatch({
+      type: SHOW_LOADING,
+    });
+    setTimeout(() => {
+      dispatch({
+        type: HIDE_LOADING,
+      });
+    }, 1500);
   }, []);
   const renderListProject = () => {
     return listProject
@@ -139,6 +151,7 @@ export default function GetAllProject() {
         dataSource={renderListProject()}
         onChange={onChange}
       />
+      <Loadding />
     </div>
   );
 }

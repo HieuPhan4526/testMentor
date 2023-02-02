@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { CreateProjectAction } from "../../redux/Actions/ProjectAction";
+import { NavLink } from "react-router-dom";
 
 export default function CreateProject() {
   const dispatch = useDispatch();
@@ -52,6 +53,15 @@ export default function CreateProject() {
 
   return (
     <div className="creactProject">
+      <p className="creactProject-title">
+        <NavLink className="text-title" to="/getproject">
+          Project
+        </NavLink>
+        /
+        <NavLink className="text-title" to="/create">
+          NewProject
+        </NavLink>
+      </p>
       <h2>New project</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-inputProject">

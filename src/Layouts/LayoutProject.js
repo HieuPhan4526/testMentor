@@ -18,7 +18,7 @@ export const LayoutProject = (props) => {
                             <Link className="nav-textMenu" to="#">User</Link>
                         </li>
                         <li>
-                            <NavLink className="nav-textMenu" to="/create">Create task</NavLink>
+                            <Link className="nav-textMenu" to="#">Create task</Link>
                         </li>
                     </ul>
                 </nav>
