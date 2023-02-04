@@ -26,9 +26,10 @@ a:hover{
     color: blue;
 }
 
-.ant-table-wrapper .css-dev-only-do-not-override-ixblex{
-    overflow: auto;
+.ant-table {
+    overflow: auto !important;
 }
+
 .Sign{
     display: flex;
     justify-content: space-around;
@@ -261,6 +262,10 @@ a:hover{
     }
     .navbars{
         padding: 7px 10px 19px;
+        gap: 20px;
+    }
+    .creactProject{
+        padding: 0 40px;
     }
     
 }
