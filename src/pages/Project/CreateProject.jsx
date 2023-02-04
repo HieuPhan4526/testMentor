@@ -39,6 +39,18 @@ export default function CreateProject() {
         return;
       }
     }
+
+    for (const key in values) {
+      if (values.projectName == "" || values.category == "") {
+        swal({
+          title: "ProjectName and Category is required!",
+          text: "You clicked the button!",
+          icon: "warning",
+          button: "OK!",
+        });
+      }
+      return;
+    }
     dispatch(CreateProjectAction(values));
   };
 
