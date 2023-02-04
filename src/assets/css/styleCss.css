@@ -25,39 +25,16 @@ a{
 a:hover{
     color: blue;
 }
-.homeImg{
-    background-image: url("https://c4.wallpaperflare.com/wallpaper/291/819/697/illustration-city-anime-painting-wallpaper-preview.jpg");
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    height: 100vh;
-}
-.overlay{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0,0.5);
-}
-.home-content{
-    width: 40%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: white;
-    border-radius: 2px;
-    text-align: center;
-}
-.home-content img{
-    width: 100%;
-    height: 150px;
+
+.ant-table-wrapper .css-dev-only-do-not-override-ixblex{
+    overflow: auto;
 }
 .Sign{
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-top: 200px;
+    flex-wrap: wrap;
 }
 .Sign-img img{
     width: 100%;
@@ -131,6 +108,7 @@ a:hover{
     align-items: center;
     padding: 40px 30px 10px 60px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .nav-menu{
     display: flex;
@@ -275,7 +253,14 @@ a:hover{
     }
 }
 @media only screen and (max-width: 600px) {
-    .home-content{
-        width: 80%;
+    .Sign-content{
+        padding: 40px;
     }
+    .Sign-img img{
+        height: 360px;
+    }
+    .navbars{
+        padding: 7px 10px 19px;
+    }
+    
 }
