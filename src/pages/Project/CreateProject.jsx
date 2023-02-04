@@ -14,7 +14,6 @@ export default function CreateProject() {
   const [errors, setErrors] = useState({
     projectName: "",
     category: "",
-    description: "",
   });
   const handleChange = (e) => {
     let { value, name } = e.target;
@@ -31,15 +30,6 @@ export default function CreateProject() {
     e.preventDefault();
     for (const key in errors) {
       if (errors[key] !== "") {
-        swal({
-          title: "Something is not right!",
-          text: "You clicked the button!",
-          icon: "warning",
-          button: "OK!",
-        });
-        return;
-      }
-      if (values[key] == "") {
         swal({
           title: "Something is not right!",
           text: "You clicked the button!",
@@ -96,7 +86,6 @@ export default function CreateProject() {
             onChange={handleChange}
           />
         </div>
-        <p className="errors-Vali">{errors.description}</p>
         <button type="button" className="projectButton">
           Cancel
         </button>
